@@ -24,6 +24,11 @@ const nodeHealthCheck = async (nodeUrl, trial) => {
     } else {
         try {
             const response = await chainInterface(nodeUrl)
+
+            if (nodeUrl === 'node0.main.topl.network' && (Date.now() - response.bestBlock.timestamp) > settings.blockCreationTimeout && shouldNotify(nodeUrl)) {
+                mailer(genMsg(`A block has not been forged in the last 5 minutes! Log into node0 to diagnose the problem as soon as possible.`))
+            }
+
             return response.result.height
 
         } catch (err) {

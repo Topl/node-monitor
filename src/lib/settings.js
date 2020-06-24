@@ -8,4 +8,5 @@ module.exports = {
     retryHealthCheck: process.env.RETRY_HEALTH || 30000, // 30 seconds in ms
     numberOfFails: process.env.NUM_FAILS || 4,
     notifyExpiration: process.env.NOTIFY_EXPIRY || 21600000, // 6 hours in ms
+    blockCreationTimeout: process.env.BLOCK_TIMEOUT || 300000, // 5 minutes in ms (timeout on block creation not occuring)
 }
