@@ -2,7 +2,7 @@ const fetch = require('node-fetch')
 
 async function MononChainInfo(url) {
     try {
-        const route = `http://${url}:9585/debug/info`;
+        const route = `http://${url}/debug/info`;
         const payload = {
             method: 'GET',
             headers: {
