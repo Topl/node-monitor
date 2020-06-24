@@ -20,7 +20,6 @@
   "homepage": "https://github.com/Topl/node-monitor#readme",
   "dependencies": {
     "@sendgrid/mail": "^7.2.0",
-    "brambljs": "^1.0.0",
     "dotenv": "^8.2.0"
   },
   "devDependencies": {
