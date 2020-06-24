@@ -4,7 +4,7 @@
   "description": "A simple and naive monitor application for querying Topl nodes",
   "main": "./src/app.js",
   "scripts": {
-    "start": "node ./arc/app.js",
+    "start": "node ./src/app.js",
     "start:dev": "nodemon ./src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,7 +20,8 @@
   "homepage": "https://github.com/Topl/node-monitor#readme",
   "dependencies": {
     "@sendgrid/mail": "^7.2.0",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
